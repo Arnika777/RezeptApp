@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm">
+
+      <mat-card class="example-card">
+
+        <mat-card-header>
+          <mat-card-title>Neuer Rezepteintrag</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="example-container">
+            <mat-form-field>
+              <input type="text" matInput placeholder="Titel" [(ngModel)]="recipe.title">
+            </mat-form-field>
+
+            <mat-form-field>
+              <textarea matInput placeholder="Rezept" [(ngModel)]="recipe.recipe"></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-select placeholder="Schwierigkeitsgrad" [(ngModel)]="recipe.level">
+                <mat-option value="leicht">Leicht</mat-option>
+                <mat-option value="mittel">Mittel</mat-option>
+                <mat-option value="schwierig">Schwierig</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-button color="warn" (click)="discard()">Zurücksetzen</button>
+          <button mat-raised-button color="primary" (click)="save()">Speichern</button>
+        </mat-card-actions>
+
+      </mat-card>
+
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+
